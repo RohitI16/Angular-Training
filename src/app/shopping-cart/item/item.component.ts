@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   imports: [CommonModule, FormsModule]
   ,
   templateUrl: './item.component.html',
-  styleUrl: './item.component.css'
+    styleUrls: ['./item.component.css']
 })
 export class ItemComponent {
 

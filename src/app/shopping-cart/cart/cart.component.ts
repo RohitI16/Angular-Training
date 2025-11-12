@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './cart.component.html',
-  styleUrl: './cart.component.css'
+    styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
  cartItems: CartItem[] = [];

@@ -13,7 +13,7 @@ import { CustomModule } from './custom/custom.module';
   imports: [CommonModule,RouterModule,CatalogModule,
             SharedModule,CustomModule, SignInComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'estorespa';

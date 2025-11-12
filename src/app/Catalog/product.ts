@@ -5,5 +5,7 @@ export class  Product {
     public price?: number;
     public likes?: number;
     public imageurl?: string;
+    public stock?: number;
+    public discount?: number;
   }
   

@@ -1,10 +1,12 @@
 <h2>Details</h2>
 <hr/>
-<div class="card-body">
+<div class="card-body" [appProductHighlight]="product">
         <h5 class="card-title">{{product?.title}}</h5>
           <img [src]="product?.imageurl" width="100" height="100" alt="{{product?.title}}"/>
          <p class="card-text">Likes: ₹{{product?.title}}</p>
          <p class="card-text">Likes: ₹{{product?.description}}</p>
+         <p *ngIf="product?.discount > 0">Discount: {{product?.discount}}%</p>
+         <p *ngIf="product?.stock === 0">Out of Stock</p>
          <p class="card-text">Likes: ₹{{product?.price}}</p>
          <p class="card-text">Likes: ₹{{product?.likes}}</p>
          <app-counter [count]="product?.likes"  (update)="onUpdate($event)"> </app-counter>

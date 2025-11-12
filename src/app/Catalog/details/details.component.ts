@@ -3,13 +3,14 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { Product } from '../product';
 import { CounterComponent } from '../counter/counter.component';
+import { AppProductHighlightDirective } from '../counter/app-product-highlight.directive';
  
 @Component({
   selector: 'app-details',
   standalone:true,
-  imports:[CounterComponent],
+  imports:[CounterComponent, AppProductHighlightDirective],
   templateUrl: './details.component.html',
-  styleUrl: './details.component.css'
+  styleUrls: ['./details.component.css']
 })
 export class DetailsComponent {
 

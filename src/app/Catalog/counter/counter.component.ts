@@ -3,7 +3,7 @@ import { Component, Input, Output ,EventEmitter} from '@angular/core';
   selector: 'app-counter',
   standalone:true,
   templateUrl: './counter.component.html',
-  styleUrl: './counter.component.css'
+  styleUrls: ['./counter.component.css']
 })
 export class CounterComponent {
   @Input() count: number | undefined;  // Allow undefined
