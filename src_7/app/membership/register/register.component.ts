@@ -11,8 +11,8 @@ import { CommonModule } from '@angular/common';
   styleUrl: './register.component.css'
 })
 export class RegisterComponent {
-    model = new Customer('Ravi','Tambade','ravi.tambade@transflower.in',9881735801,28,
-                     new Date(1975,18,8),'Pune',
+    model = new Customer('Rohit','Ingawale','rohit.ingawale@transflower.in',7775967743,21,
+                     new Date(2000,18,6),'Satara',
                      'S',
                      false,['T', 'B']);
     constructor() {  }

@@ -8,7 +8,7 @@ export class AuthService {
 
   constructor() { }
    login(user: string, password: string): boolean {
-      if (user === 'ravi' && password === 'seed') {
+      if (user === 'rohit' && password === 'test') {
       localStorage.setItem('username', user);
       let status = localStorage.getItem("loggedInStatus");
       if(status=="false"){

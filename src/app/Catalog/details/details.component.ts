@@ -49,7 +49,7 @@ export class DetailsComponent {
   }
    // ngIf
   isLoggedIn = true;
-  userName = 'Ravi';
+  userName = 'Rohit';
 
   // ngFor
   products = [
