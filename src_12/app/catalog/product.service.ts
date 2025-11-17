@@ -1,7 +1,4 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Product } from './product';
 
 @Injectable({
   providedIn: 'root'
@@ -16,24 +13,22 @@ export class ProductService {
       {"id": 17,  "title":"Marigold", "description": "Festival flower","price":4,"likes":56000, "imageurl":"/assets/images/marigold.jpg", "stock":30, "discount":0}
   ];
 
-  constructor(private http:HttpClient) { }
+  constructor() { }
 
-  private  url:string="http://localhost:8000/flowers";
-  getAllProducts():Observable<Product[]>
-  { 
-    return this.http.get<Product[]>(this.url); 
-  }
+  getAllProducts():any
+  { return this.list; }
   
-  getProductById(id:number):Observable<Product>
+  getProductById(id:number):any
   { 
-   return this.http.get<Product>(this.url+"/"+ id);
+    console.log("selected product id="+ id);
+    //return {id:6,title:'Lily',description:"wedding Flower",unitPrice:10, quantity:2300,likes:76,imageUrl:"./assets/images/gerbera.jpg"};
+   return this.list.find((p:any)=>{ return p.id ==id});
   }
   
   updateProduct(prod:any):void
   {
-    this.http.put<Product>(this.url+"/"+ prod.id, prod).subscribe();
-    // let index=this.list.findIndex((p:any)=> p.id==prod.id);
-    // if(index != -1)
-    //  this.list[index]=prod;
+    let index=this.list.findIndex((p:any)=> p.id==prod.id);
+    if(index != -1)
+     this.list[index]=prod;
   }
 }

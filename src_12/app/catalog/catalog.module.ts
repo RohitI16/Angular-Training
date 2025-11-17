@@ -9,13 +9,12 @@ import { DeleteComponent } from './delete/delete.component';
 import { CounterComponent } from './counter/counter.component';
 import { CreateComponent } from './create/create.component';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
  
 @NgModule({
   declarations: [ UpdateComponent,
                   DeleteComponent,
                   CreateComponent],
-  imports: [CommonModule,FormsModule,RouterModule,HttpClientModule],
+  imports: [CommonModule,FormsModule,RouterModule],
   providers:[ProductService]  
 })
 export class CatalogModule { }

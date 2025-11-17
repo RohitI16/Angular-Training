@@ -22,11 +22,8 @@ export class DetailsComponent {
   
   ngOnInit() { 
     this.currentProductId=this.route.snapshot.paramMap.get("id");
-    const id = Number(this.currentProductId);
-    if (!isNaN(id)) {
-      this.productService.getProductById(id).subscribe(prod => this.product = prod);
-    }
-  };  
+    this.product=this.productService.getProductById(this.currentProductId);
+  };
  
   onUpdate(data:any){
      if(this.product != undefined)

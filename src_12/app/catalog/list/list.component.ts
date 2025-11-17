@@ -21,10 +21,7 @@ products:any[]=[]
               private route: ActivatedRoute) {  }
 
   ngOnInit() {
-    this.svc.getAllProducts().subscribe((products: any[]) => {
-      console.log(products);
-      this.products = products;
-    });
+    this.products = this.svc.getAllProducts();
   }
 
 
